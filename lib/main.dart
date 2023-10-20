@@ -66,12 +66,12 @@ class HomePage extends StatelessWidget{
           const SizedBox(height: 15),
           Row(
             children: [
-              ElevatedButton(onPressed: (){},
-              child: const Text("Logout")
-
-
-
-              )
+             OutlinedButton(
+                 style: ButtonStyle(
+                   backgroundColor: MaterialStateProperty.all(Colors.white70)
+                 ),
+                 onPressed: (){},
+                 child: Text("Logout"))
 
 
             ],
@@ -85,14 +85,38 @@ class HomePage extends StatelessWidget{
             color: Colors.grey,
           ),
 
-       const Text("What we'll be doing",style: TextStyle(
-         fontSize: 20,fontWeight: FontWeight.w600,
-       ),),
+
+          Container(
+
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("What we'll be doing",style: TextStyle(
+                    fontSize: 20,fontWeight: FontWeight.w600,
+                  ),),
+                ],
 
 
 
-          Text('Join us for a day full of Firebase Workshops and Pizza!',),
-          const Padding(padding:EdgeInsets.only(top: 20.0))
+              )
+
+
+
+          ),
+
+SizedBox(height: 14,),
+
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('Join us for a day full of Firebase Workshops and Pizza!',),
+            ],
+
+
+
+         )
+
+
 
      
 
